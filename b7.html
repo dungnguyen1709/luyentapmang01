@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let spt = prompt("Nhập số lượng phần tử");
+  let a = [];
+  for (i = 0; i < spt; i++) {
+      let add = Number(prompt("Nhập các phần tử: " + i));
+      a.push(add);
+  }
+  let b = prompt("Số muốn xóa: ");
+  for (i = 0; i < a.length; i++)
+  {
+      if (b == a[i])
+      {
+          index = i;
+          for (j = index; j < a.length; j++)
+          {
+              a[j] = a[j + 1];
+          }
+          a[a.length-1] = 0;
+      }
+  }
+  document.write("Mảng mới là: " + a);
+</script>
+</body>
+</html>
